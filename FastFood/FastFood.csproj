@@ -1,0 +1,292 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A8D76C99-EFB5-414E-9603-C09B5E941A61}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>FastFood</RootNamespace>
+    <AssemblyName>FastFood</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BS layer\BLMenu.cs" />
+    <Compile Include="DBLayer\DBMain.cs" />
+    <Compile Include="Forms\Bill.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Bill.Designer.cs">
+      <DependentUpon>Bill.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Burger.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Burger.Designer.cs">
+      <DependentUpon>Burger.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Drinks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Drinks.Designer.cs">
+      <DependentUpon>Drinks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Hotdogs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Hotdogs.Designer.cs">
+      <DependentUpon>Hotdogs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Menu.Designer.cs">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Pizza.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Pizza.Designer.cs">
+      <DependentUpon>Pizza.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Sandwich.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Sandwich.Designer.cs">
+      <DependentUpon>Sandwich.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ThemeColors.cs" />
+    <EmbeddedResource Include="Forms\Bill.resx">
+      <DependentUpon>Bill.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Burger.resx">
+      <DependentUpon>Burger.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Drinks.resx">
+      <DependentUpon>Drinks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Hotdogs.resx">
+      <DependentUpon>Hotdogs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Menu.resx">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Pizza.resx">
+      <DependentUpon>Pizza.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Sandwich.resx">
+      <DependentUpon>Sandwich.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clipart297757.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clipart105049.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clipart2977571.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\burger.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-beef-burger-96.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-burger-66.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-burger-85.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-drink-60 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-bread-85.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-pizza-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-sandwich-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-drink-60 %281%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-shopping-cart-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clipart1241162.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-burger-851.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clipart2977572.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clipart2977573.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-burger-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clipart12411621.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\best-veggie-burger-recipe-3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\crispy-chicken-burger-WEB-01.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mutton-Burger-Recipe.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\banh-hamburger-10.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\__opt__aboutcom__coeus__resources__content_migration__serious_eats__seriouseats.com__recipes__images__2012__07__20120713-burger-topping-variations-10-f6a177a12a774755a1723dfbf56df0b4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fish.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\thung-24-lon-nuoc-ngot-pepsi-cola-330ml-202004091031465977.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cold-brew-img-4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\coffee-story_647_061616085217.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ice-lemon-tea-studio-isolated-design-ice-lemon-tea-mix-honey-bee-white-background-138525567.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\soda-y.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ICE TEA.jfif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chick chee hd.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chee hd.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chee pizz.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chee tomato pizz.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mush pizz.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chick chee pizz.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chee tomato pizz1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sau pizz.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chee sand.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chick chee sand.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ham chee sand.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4435255.jpg" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\best-veggie-burger-recipe-31.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
